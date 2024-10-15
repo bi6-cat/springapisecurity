@@ -4,11 +4,16 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.zett.springapisecurity.dtos.category.CategoryCreateUpdateDTO;
 import com.zett.springapisecurity.dtos.category.CategoryDTO;
 import com.zett.springapisecurity.entities.Category;
 import com.zett.springapisecurity.repositories.CategoryRepository;
 
+@Service
+@Transactional
 public class CategoryServiceImpl implements CategoryService {
     private final CategoryRepository _categoryRepository;
 
